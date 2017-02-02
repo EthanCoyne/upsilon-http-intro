@@ -1,5 +1,5 @@
 app.service('PokeService', ['$http', function($http) {
-  var API = 'http://pokeapi.co/api/v2';
+  var API = '//pokeapi.co/api/v2';
 
   this.getAllPokemon = function() {
     // return the promise to the caller
@@ -13,7 +13,7 @@ app.service('PokeService', ['$http', function($http) {
   }; // end this.getAllPokemon()
 
   this.getPokemon = function(pokemon) {
-    console.log('Pokemon info: ', pokemon.data);
+    console.log('Pokemon info: ', pokemon);
     return $http.get(pokemon.url).then(function(response) {
       var foundPokemon = response.data;
       return foundPokemon.sprites.front_default // image
