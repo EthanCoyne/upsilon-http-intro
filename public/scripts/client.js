@@ -1,6 +1,6 @@
 var app = angular.module('pokeApp', []);
 
-app.controller('PokemonController', function(PokeService) {
+app.controller('PokemonController', ['PokeService', function(PokeService) {
   console.log('PokemonController is loaded');
 
 
@@ -39,4 +39,4 @@ app.controller('PokemonController', function(PokeService) {
     pokemon.chosen = true;
   }
 
-}); // end PokemonController
+}]); // end PokemonController

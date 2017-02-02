@@ -1,4 +1,4 @@
-app.service('PokeService', function($http) {
+app.service('PokeService', ['$http', function($http) {
   var API = 'http://pokeapi.co/api/v2';
 
   this.getAllPokemon = function() {
@@ -25,4 +25,4 @@ app.service('PokeService', function($http) {
 
 
 
-}); // end app.service()
+}]); // end app.service()
